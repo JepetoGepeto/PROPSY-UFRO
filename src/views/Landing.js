@@ -14,7 +14,7 @@ export default function App() {
         <Image source={require('../../assets/images/UFRO.png')} className="w-[296] h-[102]" />
       </View>
       <View className="flex-1 justify-center items-center">
-        <Button text="INICIAR" onPress={() => console.log('Button pressed')} />
+        <Button text="INICIAR" onPress={() => navigation.navigate("Name")} />
         </View>
     </View>
 
