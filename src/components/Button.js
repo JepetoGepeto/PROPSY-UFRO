@@ -13,7 +13,7 @@ export default function Button({ text, onPress }) {
       onPress={onPress}
       className="bg-primary h-12 items-center justify-center rounded-full w-1/6"
     >
-      <Text className="text-[#3E3E44]] font-bold">{text}</Text>
+      <Text className="text-[#3E3E44] font-bold">{text}</Text>
     </TouchableOpacity>
   );
 }

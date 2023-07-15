@@ -4,6 +4,7 @@ import Name from "../views/userData/NameSurveyed";
 import Age from "../views/userData/AgeSurveyed";
 import Birthday from "../views/userData/BirthdaySurveyed";
 import Sex from "../views/userData/SexSurveyed";
+import Coincide from "../views/userData/CoincideSurveyed";
 
 const Stack = createStackNavigator();
 
@@ -12,13 +13,14 @@ export default function NavigationStack() {
     return (
       <Stack.Navigator
         screenOptions={{ headerShown: false }}
-        initialRouteName="Landing"
+        initialRouteName="Sex"
       >
         <Stack.Screen name="Landing" component={Landing} />
         <Stack.Screen name="Name" component={Name} />
         <Stack.Screen name="Age" component={Age} />
         <Stack.Screen name="Birthday" component={Birthday} />
         <Stack.Screen name="Sex" component={Sex} />
+        <Stack.Screen name="Coincide" component={Coincide} />
       </Stack.Navigator>
     );
   }
