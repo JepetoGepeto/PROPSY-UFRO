@@ -9,17 +9,10 @@ const BirthdaySurveyed = () => {
     const [year, setYear] = useState('');
     const navigation = useNavigation();
 
-    const handleSubmit = () => {
-        // Validar y procesar la fecha de cumpleaños
-        const birthday = `${day}/${month}/${year}`;
-        console.log('Cumpleaños:', birthday);
-        // Resto del código de manejo o navegación
-    };
-
     return (
         <View className="flex-1 bg-[#5F6896]">
             <View className="flex-1 justify-center items-center mt-10">
-            <Text className="text-5xl rotate-180 text-[#3E3E44] bg-primary mb-4 p-4 rounded-lg font-bold">¿Cual es su fecha de nacimiento?</Text>
+            <Text className="text-7xl rotate-180 text-[#3E3E44] bg-primary mb-4 p-4 rounded-lg font-bold">¿Cual es su fecha de nacimiento?</Text>
 
                 <TextInput
                     className="h-[40] w-2/5 border-[#DCDEE8] text-[#DCDEE8] border rounded-lg px-2 mb-2"

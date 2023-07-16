@@ -10,7 +10,7 @@ const NombreEncuestado = () => {
     return (
         <View className="flex-1 bg-[#5F6896]">
           <View className="flex-1 justify-center items-center mt-10">
-            <Text className="text-5xl rotate-180 text-[#3E3E44] bg-primary mb-4 p-4 rounded-lg font-bold">¿Cual es su nombre?</Text>
+            <Text className="text-7xl rotate-180 text-[#3E3E44] bg-primary mb-4 p-4 rounded-lg font-bold">¿Cual es su nombre?</Text>
             <TextInput
               className="h-[40] w-3/5 border-[#DCDEE8] text-[#DCDEE8] border rounded-lg px-2 mb-2"
               placeholder="Nombre completo del encuestado"
