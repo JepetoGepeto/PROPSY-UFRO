@@ -13,7 +13,7 @@ const LanguageExtra = () => {
           <Text className="text-7xl rotate-180 text-[#3E3E44] bg-primary mb-4 p-4 rounded-lg font-bold">En caso de que su respuesta anterior fuera “Si”, por favor indíquenos cuál/es:</Text>
             <TextInput
               className="h-[40] w-2/5 border-[#DCDEE8] text-[#DCDEE8] border rounded-lg px-2 mb-2"
-              placeholder="Indique el idioma"
+              placeholder="Indique el o los idioma(s)"
               placeholderTextColor={'#DCDEE898'}
               value={language}
               onChangeText={text => setLanguage(text)}

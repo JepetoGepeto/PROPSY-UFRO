@@ -44,7 +44,7 @@ const Daily17 = () => {
                     <TouchableOpacity className="bg-secondary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate("Daily16")}>
                         <Icon name="arrow-left" size={50} color="#000000" />
                     </TouchableOpacity>
-                    <TouchableOpacity className="bg-tertiary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate("")}>
+                    <TouchableOpacity className="bg-tertiary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate("LandingFinal")}>
                         <Icon name="arrow-right" size={50} color="#000000" />
                     </TouchableOpacity>
                 </View>

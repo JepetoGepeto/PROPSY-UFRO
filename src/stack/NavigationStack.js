@@ -49,7 +49,7 @@ import IfDrinker3 from "../views/questions/drinking/IfDrinker3";
 import IfExDrinkerContext from "../views/questions/drinking/IfExDrinkerContext";
 import IfExDrinker1 from "../views/questions/drinking/IfExDrinker1";
 import IfExDrinker2 from "../views/questions/drinking/IfExDrinker2";
-import IfExDrinker3 from "../views/questions/drinking/IfDrinker3";
+import IfExDrinker3 from "../views/questions/drinking/IfExDrinker3";
 import MostlyContext from "../views/questions/mostly/MostlyContext";
 import Mostly1 from "../views/questions/mostly/Mostly1";
 import Mostly2 from "../views/questions/mostly/Mostly2";
@@ -147,12 +147,13 @@ import Situations16 from "../views/questions/situations/Situations16";
 import Situations17 from "../views/questions/situations/Situations17";
 import Situations18 from "../views/questions/situations/Situations18";
 import Situations19 from "../views/questions/situations/Situations19";
-import SituationsTwoContext from "../views/situationsTwo/SituationsTwoContext";
-import SituationsTwo1 from "../views/situationsTwo/SituationsTwo1";
-import SituationsTwo2 from "../views/situationsTwo/SituationsTwo2";
-import SituationsTwo3 from "../views/situationsTwo/SituationsTwo3";
-import SituationsTwo4 from "../views/situationsTwo/SituationsTwo4";
-import SituationsTwo5 from "../views/situationsTwo/SituationsTwo5";
+import SituationsTwoContext from "../views/questions/situationsTwo/SituationsTwoContext";
+import SituationsTwo1 from "../views/questions/situationsTwo/SituationsTwo1";
+import SituationsTwo2 from "../views/questions/situationsTwo/SituationsTwo2";
+import SituationsTwo3 from "../views/questions/situationsTwo/SituationsTwo3";
+import SituationsTwo4 from "../views/questions/situationsTwo/SituationsTwo4";
+import SituationsTwo5 from "../views/questions/situationsTwo/SituationsTwo5";
+import SituationsTwo6 from "../views/questions/situationsTwo/SituationsTwo6";
 import FamilyContext from "../views/questions/family/FamilyContext";
 import Family1 from "../views/questions/family/Family1";
 import Family2 from "../views/questions/family/Family2";
@@ -207,7 +208,7 @@ import Daily14 from "../views/questions/daily/Daily14";
 import Daily15 from "../views/questions/daily/Daily15";
 import Daily16 from "../views/questions/daily/Daily16";
 import Daily17 from "../views/questions/daily/Daily17";
-landing
+import LandingFinal from "../views/LandingFinal";
 
 const Stack = createStackNavigator();
 
@@ -372,6 +373,7 @@ export default function NavigationStack() {
         <Stack.Screen name="SituationsTwo3" component={SituationsTwo3} />
         <Stack.Screen name="SituationsTwo4" component={SituationsTwo4} />
         <Stack.Screen name="SituationsTwo5" component={SituationsTwo5} />
+        <Stack.Screen name="SituationsTwo6" component={SituationsTwo6} />
         <Stack.Screen name="FamilyContext" component={FamilyContext} />
         <Stack.Screen name="Family1" component={Family1} />
         <Stack.Screen name="Family2" component={Family2} />
@@ -426,6 +428,7 @@ export default function NavigationStack() {
         <Stack.Screen name="Daily15" component={Daily15} />
         <Stack.Screen name="Daily16" component={Daily16} />
         <Stack.Screen name="Daily17" component={Daily17} />
+        <Stack.Screen name="LandingFinal" component={LandingFinal} />
 
         
 

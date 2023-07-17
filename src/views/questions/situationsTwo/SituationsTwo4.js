@@ -31,7 +31,7 @@ const SituationsTwo4 = () => {
     return (
         <View className="flex-1 bg-[#5F6896] justify-center">
             <View className="flex-1 mt-12 items-center">
-                <Text className="text-7xl rotate-180 text-[#3E3E44] bg-primary mb-4 p-4 rounded-lg font-bold">Estando con otras personas, me he sentido excluida/o</Text>
+                <Text className="text-7xl rotate-180 text-[#3E3E44] bg-primary mb-4 p-4 rounded-lg font-bold">Me ha resultado fácil ponerme en contacto con otros cuando lo necesité</Text>
                 <FlatList
                     data={options}
                     renderItem={renderItem}

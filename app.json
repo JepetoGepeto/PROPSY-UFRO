@@ -21,7 +21,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.jepeto.PROPSY"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -33,6 +34,11 @@
           "initialOrientation": "LANDSCAPE"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "4ca93813-5972-4b22-bb35-0491a7f3e778"
+      }
+    }
   }
 }

@@ -31,7 +31,7 @@ const SituationsTwo5 = () => {
     return (
         <View className="flex-1 bg-[#5F6896] justify-center">
             <View className="flex-1 mt-12 items-center">
-                <Text className="text-7xl rotate-180 text-[#3E3E44] bg-primary mb-4 p-4 rounded-lg font-bold">Me he sentido sola/o o sin amigos</Text>
+                <Text className="text-7xl rotate-180 text-[#3E3E44] bg-primary mb-4 p-4 rounded-lg font-bold">Estando con otras personas, me he sentido excluida/o</Text>
                 <FlatList
                     data={options}
                     renderItem={renderItem}
@@ -44,7 +44,7 @@ const SituationsTwo5 = () => {
                     <TouchableOpacity className="bg-secondary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate("SituationsTwo4")}>
                         <Icon name="arrow-left" size={50} color="#000000" />
                     </TouchableOpacity>
-                    <TouchableOpacity className="bg-tertiary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate("FamilyContext")}>
+                    <TouchableOpacity className="bg-tertiary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate("SituationsTwo6")}>
                         <Icon name="arrow-right" size={50} color="#000000" />
                     </TouchableOpacity>
                 </View>
