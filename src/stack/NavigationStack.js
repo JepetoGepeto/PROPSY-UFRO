@@ -216,7 +216,7 @@ export default function NavigationStack() {
     return (
       <Stack.Navigator
         screenOptions={{ headerShown: false }}
-        initialRouteName="SmokingContext"
+        initialRouteName="Landing"
       >
         <Stack.Screen name="Landing" component={Landing} />
         <Stack.Screen name="Name" component={Name} />
