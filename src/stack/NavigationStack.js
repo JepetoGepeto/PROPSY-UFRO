@@ -26,6 +26,103 @@ import Language from "../views/userData/LanguageSurveyed";
 import LanguageExtra from "../views/userData/LanguageExtra";
 import SocioEconomicLevel from "../views/userData/SocioEconomicLevel";
 import SleepingHours from "../views/userData/SleepingHours";
+import SleepingContext from "../views/questions/sleeping/SleepingContext";
+import Sleeping1 from "../views/questions/sleeping/Sleeping1";
+import Sleeping2 from "../views/questions/sleeping/Sleeping2";
+import Sleeping3 from "../views/questions/sleeping/Sleeping3";
+import Sleeping4 from "../views/questions/sleeping/Sleeping4";
+import Sleeping5 from "../views/questions/sleeping/Sleeping5";
+import SmokingContext from "../views/questions/smoking/SmokingContext";
+import Smoking1 from "../views/questions/smoking/Smoking1";
+import IfSmokerContext from "../views/questions/smoking/IfSmokerContext";
+import IfSmoker1 from "../views/questions/smoking/IfSmoker1";
+import IfSmoker2 from "../views/questions/smoking/IfSmoker2";
+import IfExSmokerContext from "../views/questions/smoking/IfExSmokerContext";
+import IfExSmoker1 from "../views/questions/smoking/IfExSmoker1";
+import IfExSmoker2 from "../views/questions/smoking/IfExSmoker2";
+import IfExSmoker3 from "../views/questions/smoking/IfExSmoker3";
+import Drinking1 from "../views/questions/drinking/Drinking1";
+import IfDrinkerContext from "../views/questions/drinking/IfDrinkerContext";
+import IfDrinker1 from "../views/questions/drinking/IfDrinker1";
+import IfDrinker2 from "../views/questions/drinking/IfDrinker2";
+import IfDrinker3 from "../views/questions/drinking/IfDrinker3";
+import IfExDrinkerContext from "../views/questions/drinking/IfExDrinkerContext";
+import IfExDrinker1 from "../views/questions/drinking/IfExDrinker1";
+import IfExDrinker2 from "../views/questions/drinking/IfExDrinker2";
+import IfExDrinker3 from "../views/questions/drinking/IfDrinker3";
+import MostlyContext from "../views/questions/mostly/MostlyContext";
+import Mostly1 from "../views/questions/mostly/Mostly1";
+import Mostly2 from "../views/questions/mostly/Mostly2";
+import Mostly3 from "../views/questions/mostly/Mostly3";
+import Mostly4 from "../views/questions/mostly/Mostly4";
+import Mostly5 from "../views/questions/mostly/Mostly5";
+import Mostly6 from "../views/questions/mostly/Mostly6";
+import Mostly7 from "../views/questions/mostly/Mostly7";
+import Mostly8 from "../views/questions/mostly/Mostly8";
+import Mostly9 from "../views/questions/mostly/Mostly9";
+import Mostly10 from "../views/questions/mostly/Mostly10";
+import Mostly11 from "../views/questions/mostly/Mostly11";
+import Mostly12 from "../views/questions/mostly/Mostly12";
+import Mostly13 from "../views/questions/mostly/Mostly13";
+import Mostly14 from "../views/questions/mostly/Mostly14";
+import Mostly15 from "../views/questions/mostly/Mostly15";
+import OlderContext from "../views/questions/older/OlderContext";
+import Older1 from "../views/questions/older/Older1";
+import Older2 from "../views/questions/older/Older2";
+import Older3 from "../views/questions/older/Older3";
+import Older4 from "../views/questions/older/Older4";
+import Older5 from "../views/questions/older/Older5";
+import Older6 from "../views/questions/older/Older6";
+import Older7 from "../views/questions/older/Older7";
+import Older8 from "../views/questions/older/Older8";
+import Older9 from "../views/questions/older/Older9";
+import Older10 from "../views/questions/older/Older10";
+import Older11 from "../views/questions/older/Older11";
+import Older12 from "../views/questions/older/Older12";
+import Older13 from "../views/questions/older/Older13";
+import FeelingContext from "../views/questions/feeling/FeelingContext";
+import Feeling1 from "../views/questions/feeling/Feeling1";
+import Feeling2 from "../views/questions/feeling/Feeling2";
+import Feeling3 from "../views/questions/feeling/Feeling3";
+import Feeling4 from "../views/questions/feeling/Feeling4";
+import Feeling5 from "../views/questions/feeling/Feeling5";
+import Feeling6 from "../views/questions/feeling/Feeling6";
+import Feeling7 from "../views/questions/feeling/Feeling7";
+import ProcessContext from "../views/questions/process/ProcessContext";
+import Process1 from "../views/questions/process/Process1";
+import Process2 from "../views/questions/process/Process2";
+import Process3 from "../views/questions/process/Process3";
+import Process4 from "../views/questions/process/Process4";
+import Process5 from "../views/questions/process/Process5";
+import Process6 from "../views/questions/process/Process6";
+import Process7 from "../views/questions/process/Process7";
+import Process8 from "../views/questions/process/Process8";
+import Process9 from "../views/questions/process/Process9";
+import Process10 from "../views/questions/process/Process10";
+import Process11 from "../views/questions/process/Process11";
+import Process12 from "../views/questions/process/Process12";
+import Process13 from "../views/questions/process/Process13";
+import Process14 from "../views/questions/process/Process14";
+import Process15 from "../views/questions/process/Process15";
+import Process16 from "../views/questions/process/Process16";
+import Process17 from "../views/questions/process/Process17";
+import Process18 from "../views/questions/process/Process18";
+import Process19 from "../views/questions/process/Process19";
+import Process20 from "../views/questions/process/Process20";
+import Process21 from "../views/questions/process/Process21";
+import Process22 from "../views/questions/process/Process22";
+import Process23 from "../views/questions/process/Process23";
+import FrequencyContext from "../views/questions/frequency/FrequencyContext";
+import Frequency1 from "../views/questions/frequency/Frequency1";
+import Frequency2 from "../views/questions/frequency/Frequency2";
+import Frequency3 from "../views/questions/frequency/Frequency3";
+import Frequency4 from "../views/questions/frequency/Frequency4";
+import Frequency5 from "../views/questions/frequency/Frequency5";
+import Frequency6 from "../views/questions/frequency/Frequency6";
+import Frequency7 from "../views/questions/frequency/Frequency7";
+import Frequency8 from "../views/questions/frequency/Frequency8";
+import Frequency9 from "../views/questions/frequency/Frequency9";
+import Frequency10 from "../views/questions/frequency/Frequency10";
 
 const Stack = createStackNavigator();
 
@@ -34,7 +131,7 @@ export default function NavigationStack() {
     return (
       <Stack.Navigator
         screenOptions={{ headerShown: false }}
-        initialRouteName="LanguageExtra"
+        initialRouteName="SmokingContext"
       >
         <Stack.Screen name="Landing" component={Landing} />
         <Stack.Screen name="Name" component={Name} />
@@ -63,7 +160,107 @@ export default function NavigationStack() {
         <Stack.Screen name="LanguageExtra" component={LanguageExtra} />
         <Stack.Screen name="SocioEconomicLevel" component={SocioEconomicLevel} />
         <Stack.Screen name="SleepingHours" component={SleepingHours} />
+        <Stack.Screen name="SleepingContext" component={SleepingContext} />
+        <Stack.Screen name="Sleeping1" component={Sleeping1} />
+        <Stack.Screen name="Sleeping2" component={Sleeping2} />
+        <Stack.Screen name="Sleeping3" component={Sleeping3} />
+        <Stack.Screen name="Sleeping4" component={Sleeping4} />
+        <Stack.Screen name="Sleeping5" component={Sleeping5} />
+        <Stack.Screen name="SmokingContext" component={SmokingContext} />
+        <Stack.Screen name="Smoking1" component={Smoking1} />
+        <Stack.Screen name="IfSmokerContext" component={IfSmokerContext} />
+        <Stack.Screen name="IfSmoker1" component={IfSmoker1} />
+        <Stack.Screen name="IfSmoker2" component={IfSmoker2} />
+        <Stack.Screen name="IfExSmokerContext" component={IfExSmokerContext} />
+        <Stack.Screen name="IfExSmoker1" component={IfExSmoker1} />
+        <Stack.Screen name="IfExSmoker2" component={IfExSmoker2} />
+        <Stack.Screen name="IfExSmoker3" component={IfExSmoker3} />
+        <Stack.Screen name="Drinking1" component={Drinking1} />
+        <Stack.Screen name="IfDrinkerContext" component={IfDrinkerContext} />
+        <Stack.Screen name="IfDrinker1" component={IfDrinker1} />
+        <Stack.Screen name="IfDrinker2" component={IfDrinker2} />
+        <Stack.Screen name="IfDrinker3" component={IfDrinker3} />
+        <Stack.Screen name="IfExDrinkerContext" component={IfExDrinkerContext} />
+        <Stack.Screen name="IfExDrinker1" component={IfExDrinker1} />
+        <Stack.Screen name="IfExDrinker2" component={IfExDrinker2} />
+        <Stack.Screen name="IfExDrinker3" component={IfExDrinker3} />
+        <Stack.Screen name="MostlyContext" component={MostlyContext} />
+        <Stack.Screen name="Mostly1" component={Mostly1} />
+        <Stack.Screen name="Mostly2" component={Mostly2} />
+        <Stack.Screen name="Mostly3" component={Mostly3} />
+        <Stack.Screen name="Mostly4" component={Mostly4} />
+        <Stack.Screen name="Mostly5" component={Mostly5} />
+        <Stack.Screen name="Mostly6" component={Mostly6} />
+        <Stack.Screen name="Mostly7" component={Mostly7} />
+        <Stack.Screen name="Mostly8" component={Mostly8} />
+        <Stack.Screen name="Mostly9" component={Mostly9} />
+        <Stack.Screen name="Mostly10" component={Mostly10} />
+        <Stack.Screen name="Mostly11" component={Mostly11} />
+        <Stack.Screen name="Mostly12" component={Mostly12} />
+        <Stack.Screen name="Mostly13" component={Mostly13} />
+        <Stack.Screen name="Mostly14" component={Mostly14} />
+        <Stack.Screen name="Mostly15" component={Mostly15} />
+        <Stack.Screen name="OlderContext" component={OlderContext} />
+        <Stack.Screen name="Older1" component={Older1} />
+        <Stack.Screen name="Older2" component={Older2} />
+        <Stack.Screen name="Older3" component={Older3} />
+        <Stack.Screen name="Older4" component={Older4} />
+        <Stack.Screen name="Older5" component={Older5} />
+        <Stack.Screen name="Older6" component={Older6} />
+        <Stack.Screen name="Older7" component={Older7} />
+        <Stack.Screen name="Older8" component={Older8} />
+        <Stack.Screen name="Older9" component={Older9} />
+        <Stack.Screen name="Older10" component={Older10} />
+        <Stack.Screen name="Older11" component={Older11} />
+        <Stack.Screen name="Older12" component={Older12} />
+        <Stack.Screen name="Older13" component={Older13} />
+        <Stack.Screen name="FeelingContext" component={FeelingContext} />
+        <Stack.Screen name="Feeling1" component={Feeling1} />
+        <Stack.Screen name="Feeling2" component={Feeling2} />
+        <Stack.Screen name="Feeling3" component={Feeling3} />
+        <Stack.Screen name="Feeling4" component={Feeling4} />
+        <Stack.Screen name="Feeling5" component={Feeling5} />
+        <Stack.Screen name="Feeling6" component={Feeling6} />
+        <Stack.Screen name="Feeling7" component={Feeling7} />
+        <Stack.Screen name="ProcessContext" component={ProcessContext} />
+        <Stack.Screen name="Process1" component={Process1} />
+        <Stack.Screen name="Process2" component={Process2} />
+        <Stack.Screen name="Process3" component={Process3} />
+        <Stack.Screen name="Process4" component={Process4} />
+        <Stack.Screen name="Process5" component={Process5} />
+        <Stack.Screen name="Process6" component={Process6} />
+        <Stack.Screen name="Process7" component={Process7} />
+        <Stack.Screen name="Process8" component={Process8} />
+        <Stack.Screen name="Process9" component={Process9} />
+        <Stack.Screen name="Process10" component={Process10} />
+        <Stack.Screen name="Process11" component={Process11} />
+        <Stack.Screen name="Process12" component={Process12} />
+        <Stack.Screen name="Process13" component={Process13} />
+        <Stack.Screen name="Process14" component={Process14} />
+        <Stack.Screen name="Process15" component={Process15} />
+        <Stack.Screen name="Process16" component={Process16} />
+        <Stack.Screen name="Process17" component={Process17} />
+        <Stack.Screen name="Process18" component={Process18} />
+        <Stack.Screen name="Process19" component={Process19} />
+        <Stack.Screen name="Process20" component={Process20} />
+        <Stack.Screen name="Process21" component={Process21} />
+        <Stack.Screen name="Process22" component={Process22} />
+        <Stack.Screen name="Process23" component={Process23} />
+        <Stack.Screen name="FrequencyContext" component={FrequencyContext} />
+        <Stack.Screen name="Frequency1" component={Frequency1} />
+        <Stack.Screen name="Frequency2" component={Frequency2} />
+        <Stack.Screen name="Frequency3" component={Frequency3} />
+        <Stack.Screen name="Frequency4" component={Frequency4} />
+        <Stack.Screen name="Frequency5" component={Frequency5} />
+        <Stack.Screen name="Frequency6" component={Frequency6} />
+        <Stack.Screen name="Frequency7" component={Frequency7} />
+        <Stack.Screen name="Frequency8" component={Frequency8} />
+        <Stack.Screen name="Frequency9" component={Frequency9} />
+        <Stack.Screen name="Frequency10" component={Frequency10} />
 
+
+
+        
       </Stack.Navigator>
     );
   }

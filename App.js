@@ -1,34 +1,36 @@
 import React, { useEffect } from 'react';
 import { Buffer } from 'buffer';
-import { Provider, useSelector, useDispatch } from 'react-redux'; // Import Provider, useSelector, and useDispatch from 'react-redux'
-import store from './src/app/store'; // Import your Redux store
-import { NavigationContainer } from '@react-navigation/native';
 import * as ScreenOrientation from 'expo-screen-orientation';
 import NavigationStack from './src/stack/NavigationStack';
-import { initializeSurveyData } from './src/app/surveyreducer'; // Import the action
+import { NavigationContainer } from '@react-navigation/native';
 
 if (!global.Buffer) {
   global.Buffer = Buffer;
 }
 
-export default function App() {
-  const dispatch = useDispatch(); // Create a dispatch function to use the action
+// Create the context
+const MyContext = React.createContext();
 
+export default function App() {
   useEffect(() => {
     async function setScreenOrientation() {
       await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE);
     }
     setScreenOrientation();
+  }, []);
 
-    // Dispatch the initializeSurveyData action to initialize the survey data array
-    dispatch(initializeSurveyData());
-  }, [dispatch]);
+  const store = {
+    surveyData: [],
+    addSurveyAnswer: (answer) => {
+      store.surveyData.push(answer);
+    },
+  };
 
   return (
-    <Provider store={store}>
+    <MyContext.Provider value={store}>
       <NavigationContainer>
         <NavigationStack />
       </NavigationContainer>
-    </Provider>
+    </MyContext.Provider>
   );
 }

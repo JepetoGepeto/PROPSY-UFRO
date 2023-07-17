@@ -1,4 +1,4 @@
-// surveyReducer.js
+// surveyreducer.js
 import { createSlice, createAction } from '@reduxjs/toolkit';
 
 const initialState = {
