@@ -3,16 +3,14 @@ import { View, TouchableOpacity, Text, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from "@react-navigation/native";
 
-const Frequency10 = () => {
+const Situations15 = () => {
     const [answer, setAnswer] = useState(null);
     const navigation = useNavigation();
 
     const options = [
-        { label: 'Muy en desacuerdo', value: '1' },
-        { label: 'En desacuerdo', value: '2' },
-        { label: 'Ni de acuerdo ni en desacuerdo', value: '3' },
-        { label: 'De acuerdo', value: '4' },
-        { label: 'Muy de acuerdo', value: '5' },
+        { label: 'Nunca', value: '1' },
+        { label: 'Una vez', value: '2' },
+        { label: 'Más de una vez', value: '3' },
     ];
 
     const handleAnswerSelect = (value) => {
@@ -31,7 +29,7 @@ const Frequency10 = () => {
     return (
         <View className="flex-1 bg-[#5F6896] justify-center">
             <View className="flex-1 mt-12 items-center">
-                <Text className="text-7xl rotate-180 text-[#3E3E44] bg-primary mb-4 p-4 rounded-lg font-bold">¿Con que frecuencia ha sentido que los demás no lo/a tienen en cuenta?</Text>
+                <Text className="text-7xl rotate-180 text-[#3E3E44] bg-primary mb-4 p-4 rounded-lg font-bold">Por mi edad me han negado un ascenso en el trabajo</Text>
                 <FlatList
                     data={options}
                     renderItem={renderItem}
@@ -41,10 +39,10 @@ const Frequency10 = () => {
                     showsHorizontalScrollIndicator={false}
                 />
                 <View className="flex-row space-x-4">
-                    <TouchableOpacity className="bg-secondary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate("Frequency9")}>
+                    <TouchableOpacity className="bg-secondary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate("Situations14")}>
                         <Icon name="arrow-left" size={50} color="#000000" />
                     </TouchableOpacity>
-                    <TouchableOpacity className="bg-tertiary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate("FirstOne")}>
+                    <TouchableOpacity className="bg-tertiary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate("Situations16")}>
                         <Icon name="arrow-right" size={50} color="#000000" />
                     </TouchableOpacity>
                 </View>
@@ -53,4 +51,4 @@ const Frequency10 = () => {
     );
 };
 
-export default Frequency10;
+export default Situations15;

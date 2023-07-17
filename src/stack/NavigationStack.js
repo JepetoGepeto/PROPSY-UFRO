@@ -123,6 +123,91 @@ import Frequency7 from "../views/questions/frequency/Frequency7";
 import Frequency8 from "../views/questions/frequency/Frequency8";
 import Frequency9 from "../views/questions/frequency/Frequency9";
 import Frequency10 from "../views/questions/frequency/Frequency10";
+import FirstOne from "../views/questions/theBigFour/FirstOne";
+import SecondOne from "../views/questions/theBigFour/SecondOne";
+import ThirdOne from "../views/questions/theBigFour/ThirdOne";
+import FourthOne from "../views/questions/theBigFour/FourthOne";
+import SituationsContext from "../views/questions/situations/SituationsContext";
+import Situations1 from "../views/questions/situations/Situations1";
+import Situations2 from "../views/questions/situations/Situations2";
+import Situations3 from "../views/questions/situations/Situations3";
+import Situations4 from "../views/questions/situations/Situations4";
+import Situations5 from "../views/questions/situations/Situations5";
+import Situations6 from "../views/questions/situations/Situations6";
+import Situations7 from "../views/questions/situations/Situations7";
+import Situations8 from "../views/questions/situations/Situations8";
+import Situations9 from "../views/questions/situations/Situations9";
+import Situations10 from "../views/questions/situations/Situations10";
+import Situations11 from "../views/questions/situations/Situations11";
+import Situations12 from "../views/questions/situations/Situations12";
+import Situations13 from "../views/questions/situations/Situations13";
+import Situations14 from "../views/questions/situations/Situations14";
+import Situations15 from "../views/questions/situations/Situations15";
+import Situations16 from "../views/questions/situations/Situations16";
+import Situations17 from "../views/questions/situations/Situations17";
+import Situations18 from "../views/questions/situations/Situations18";
+import Situations19 from "../views/questions/situations/Situations19";
+import SituationsTwoContext from "../views/situationsTwo/SituationsTwoContext";
+import SituationsTwo1 from "../views/situationsTwo/SituationsTwo1";
+import SituationsTwo2 from "../views/situationsTwo/SituationsTwo2";
+import SituationsTwo3 from "../views/situationsTwo/SituationsTwo3";
+import SituationsTwo4 from "../views/situationsTwo/SituationsTwo4";
+import SituationsTwo5 from "../views/situationsTwo/SituationsTwo5";
+import FamilyContext from "../views/questions/family/FamilyContext";
+import Family1 from "../views/questions/family/Family1";
+import Family2 from "../views/questions/family/Family2";
+import Family3 from "../views/questions/family/Family3";
+import GradeContext from "../views/questions/grade/GradeContext";
+import Grade1 from "../views/questions/grade/Grade1";
+import Grade2 from "../views/questions/grade/Grade2";
+import Grade3 from "../views/questions/grade/Grade3";
+import FamilyTwoContext from "../views/questions/familyTwo/FamilyTwoContext";
+import FamilyTwo1 from "../views/questions/familyTwo/FamilyTwo1";
+import FamilyTwo2 from "../views/questions/familyTwo/FamilyTwo2";
+import FamilyTwo3 from "../views/questions/familyTwo/FamilyTwo3";
+import FriendsContext from "../views/questions/friends/FriendsContext";
+import Friends1 from "../views/questions/friends/Friends1";
+import Friends2 from "../views/questions/friends/Friends2";
+import Friends3 from "../views/questions/friends/Friends3";
+import SomeoneContext from "../views/questions/someone/SomeoneContext";
+import Someone1 from "../views/questions/someone/Someone1";
+import Someone2 from "../views/questions/someone/Someone2";
+import Someone3 from "../views/questions/someone/Someone3";
+import Someone4 from "../views/questions/someone/Someone4";
+import Someone5 from "../views/questions/someone/Someone5";
+import Someone6 from "../views/questions/someone/Someone6";
+import MemoryContext from "../views/questions/memory/MemoryContext";
+import Memory1 from "../views/questions/memory/Memory1";
+import Memory2 from "../views/questions/memory/Memory2";
+import Memory3 from "../views/questions/memory/Memory3";
+import Memory4 from "../views/questions/memory/Memory4";
+import Memory5 from "../views/questions/memory/Memory5";
+import Memory6 from "../views/questions/memory/Memory6";
+import Memory7 from "../views/questions/memory/Memory7";
+import Memory8 from "../views/questions/memory/Memory8";
+import Memory9 from "../views/questions/memory/Memory9";
+import Memory10 from "../views/questions/memory/Memory10";
+import Memory11 from "../views/questions/memory/Memory11";
+import Memory12 from "../views/questions/memory/Memory12";
+import DailyContext from "../views/questions/daily/DailyContext";
+import Daily1 from "../views/questions/daily/Daily1";
+import Daily2 from "../views/questions/daily/Daily2";
+import Daily3 from "../views/questions/daily/Daily3";
+import Daily4 from "../views/questions/daily/Daily4";
+import Daily5 from "../views/questions/daily/Daily5";
+import Daily6 from "../views/questions/daily/Daily6";
+import Daily7 from "../views/questions/daily/Daily7";
+import Daily8 from "../views/questions/daily/Daily8";
+import Daily9 from "../views/questions/daily/Daily9";
+import Daily10 from "../views/questions/daily/Daily10";
+import Daily11 from "../views/questions/daily/Daily11";
+import Daily12 from "../views/questions/daily/Daily12";
+import Daily13 from "../views/questions/daily/Daily13";
+import Daily14 from "../views/questions/daily/Daily14";
+import Daily15 from "../views/questions/daily/Daily15";
+import Daily16 from "../views/questions/daily/Daily16";
+import Daily17 from "../views/questions/daily/Daily17";
+landing
 
 const Stack = createStackNavigator();
 
@@ -257,8 +342,92 @@ export default function NavigationStack() {
         <Stack.Screen name="Frequency8" component={Frequency8} />
         <Stack.Screen name="Frequency9" component={Frequency9} />
         <Stack.Screen name="Frequency10" component={Frequency10} />
+        <Stack.Screen name="FirstOne" component={FirstOne} />
+        <Stack.Screen name="SecondOne" component={SecondOne} />
+        <Stack.Screen name="ThirdOne" component={ThirdOne} />
+        <Stack.Screen name="FourthOne" component={FourthOne} />
+        <Stack.Screen name="SituationsContext" component={SituationsContext} />
+        <Stack.Screen name="Situations1" component={Situations1} />
+        <Stack.Screen name="Situations2" component={Situations2} />
+        <Stack.Screen name="Situations3" component={Situations3} />
+        <Stack.Screen name="Situations4" component={Situations4} />
+        <Stack.Screen name="Situations5" component={Situations5} />
+        <Stack.Screen name="Situations6" component={Situations6} />
+        <Stack.Screen name="Situations7" component={Situations7} />
+        <Stack.Screen name="Situations8" component={Situations8} />
+        <Stack.Screen name="Situations9" component={Situations9} />
+        <Stack.Screen name="Situations10" component={Situations10} />
+        <Stack.Screen name="Situations11" component={Situations11} />
+        <Stack.Screen name="Situations12" component={Situations12} />
+        <Stack.Screen name="Situations13" component={Situations13} />
+        <Stack.Screen name="Situations14" component={Situations14} />
+        <Stack.Screen name="Situations15" component={Situations15} />
+        <Stack.Screen name="Situations16" component={Situations16} />
+        <Stack.Screen name="Situations17" component={Situations17} />
+        <Stack.Screen name="Situations18" component={Situations18} />
+        <Stack.Screen name="Situations19" component={Situations19} />
+        <Stack.Screen name="SituationsTwoContext" component={SituationsTwoContext} />
+        <Stack.Screen name="SituationsTwo1" component={SituationsTwo1} />
+        <Stack.Screen name="SituationsTwo2" component={SituationsTwo2} />
+        <Stack.Screen name="SituationsTwo3" component={SituationsTwo3} />
+        <Stack.Screen name="SituationsTwo4" component={SituationsTwo4} />
+        <Stack.Screen name="SituationsTwo5" component={SituationsTwo5} />
+        <Stack.Screen name="FamilyContext" component={FamilyContext} />
+        <Stack.Screen name="Family1" component={Family1} />
+        <Stack.Screen name="Family2" component={Family2} />
+        <Stack.Screen name="Family3" component={Family3} />
+        <Stack.Screen name="GradeContext" component={GradeContext} />
+        <Stack.Screen name="Grade1" component={Grade1} />
+        <Stack.Screen name="Grade2" component={Grade2} />
+        <Stack.Screen name="Grade3" component={Grade3} />
+        <Stack.Screen name="FamilyTwoContext" component={FamilyTwoContext} />
+        <Stack.Screen name="FamilyTwo1" component={FamilyTwo1} />
+        <Stack.Screen name="FamilyTwo2" component={FamilyTwo2} />
+        <Stack.Screen name="FamilyTwo3" component={FamilyTwo3} />
+        <Stack.Screen name="FriendsContext" component={FriendsContext} />
+        <Stack.Screen name="Friends1" component={Friends1} />
+        <Stack.Screen name="Friends2" component={Friends2} />
+        <Stack.Screen name="Friends3" component={Friends3} />
+        <Stack.Screen name="SomeoneContext" component={SomeoneContext} />
+        <Stack.Screen name="Someone1" component={Someone1} />
+        <Stack.Screen name="Someone2" component={Someone2} />
+        <Stack.Screen name="Someone3" component={Someone3} />
+        <Stack.Screen name="Someone4" component={Someone4} />
+        <Stack.Screen name="Someone5" component={Someone5} />
+        <Stack.Screen name="Someone6" component={Someone6} />
+        <Stack.Screen name="MemoryContext" component={MemoryContext} />
+        <Stack.Screen name="Memory1" component={Memory1} />
+        <Stack.Screen name="Memory2" component={Memory2} />
+        <Stack.Screen name="Memory3" component={Memory3} />
+        <Stack.Screen name="Memory4" component={Memory4} />
+        <Stack.Screen name="Memory5" component={Memory5} />
+        <Stack.Screen name="Memory6" component={Memory6} />
+        <Stack.Screen name="Memory7" component={Memory7} />
+        <Stack.Screen name="Memory8" component={Memory8} />
+        <Stack.Screen name="Memory9" component={Memory9} />
+        <Stack.Screen name="Memory10" component={Memory10} />
+        <Stack.Screen name="Memory11" component={Memory11} />
+        <Stack.Screen name="Memory12" component={Memory12} />
+        <Stack.Screen name="DailyContext" component={DailyContext} />
+        <Stack.Screen name="Daily1" component={Daily1} />
+        <Stack.Screen name="Daily2" component={Daily2} />
+        <Stack.Screen name="Daily3" component={Daily3} />
+        <Stack.Screen name="Daily4" component={Daily4} />
+        <Stack.Screen name="Daily5" component={Daily5} />
+        <Stack.Screen name="Daily6" component={Daily6} />
+        <Stack.Screen name="Daily7" component={Daily7} />
+        <Stack.Screen name="Daily8" component={Daily8} />
+        <Stack.Screen name="Daily9" component={Daily9} />
+        <Stack.Screen name="Daily10" component={Daily10} />
+        <Stack.Screen name="Daily11" component={Daily11} />
+        <Stack.Screen name="Daily12" component={Daily12} />
+        <Stack.Screen name="Daily13" component={Daily13} />
+        <Stack.Screen name="Daily14" component={Daily14} />
+        <Stack.Screen name="Daily15" component={Daily15} />
+        <Stack.Screen name="Daily16" component={Daily16} />
+        <Stack.Screen name="Daily17" component={Daily17} />
 
-
+        
 
         
       </Stack.Navigator>
