@@ -10,10 +10,7 @@ const BirthdaySurveyed = () => {
   const [month, setMonth] = useState('');
   const [year, setYear] = useState('');
   const navigation = useNavigation();
-  const { surveyData, dispatch } = useSurveyContext();
-
-  console.log('Nombre del encuestado:', surveyData.nombre);
-  console.log('Edad del encuestado:', surveyData.edad);
+  const {dispatch } = useSurveyContext();
 
   const handleNext = () => {
     // Combina los valores de día, mes y año en un solo dato tipo String en formato "Dia/Mes/Año"

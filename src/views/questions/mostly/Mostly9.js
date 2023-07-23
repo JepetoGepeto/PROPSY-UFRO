@@ -1,55 +1,80 @@
+// Mostly9.js
 import React, { useState } from 'react';
 import { View, TouchableOpacity, Text, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation } from '@react-navigation/native';
+import { useSurveyContext } from '../../../SurveyContext';
 
 const Mostly9 = () => {
-    const [answer, setAnswer] = useState(null);
-    const navigation = useNavigation();
+  const [answer, setAnswer] = useState(null);
+  const navigation = useNavigation();
+  const { dispatch } = useSurveyContext(); // Acceder al dispatch del contexto
 
-    const options = [
-        { label: 'Totalmente en desacuerdo', value: '1' },
-        { label: 'En desacuerdo', value: '2' },
-        { label: 'De acuerdo', value: '3' },
-        { label: 'Totalmente de acuerdo', value: '4' },
-    ];
+  const options = [
+    { label: 'Totalmente en desacuerdo', value: '1' },
+    { label: 'En desacuerdo', value: '2' },
+    { label: 'De acuerdo', value: '3' },
+    { label: 'Totalmente de acuerdo', value: '4' },
+  ];
 
-    const handleAnswerSelect = (value) => {
-        setAnswer(value);
-    };
+  const handleAnswerSelect = (value) => {
+    setAnswer(value);
+  };
 
-    const renderItem = ({ item }) => (
-        <TouchableOpacity
-        className={`py-4 px-8 rounded-lg my-auto mr-2 ${item.value === answer ? 'bg-primary' : 'bg-white'}`}
-        onPress={() => handleAnswerSelect(item.value)}
-        >
-            <Text className="text-[#3E3E44] font-bold">{item.label}</Text>
-        </TouchableOpacity>
-    );
+  const renderItem = ({ item }) => {
+    const isSelected = answer === item.value;
 
     return (
-        <View className="flex-1 bg-[#5F6896] justify-center">
-            <View className="flex-1 mt-12 items-center">
-                <Text className="text-7xl rotate-180 text-[#3E3E44] bg-primary mb-4 p-4 rounded-lg font-bold">La gran mayoría de las personas de 60 años o más tienen una serie de discapacidades que les hace depender de los demás.</Text>
-                <FlatList
-                    data={options}
-                    renderItem={renderItem}
-                    keyExtractor={(item) => item.value}
-                    extraData={answer}
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                />
-                <View className="flex-row space-x-4">
-                    <TouchableOpacity className="bg-secondary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate("Mostly8")}>
-                        <Icon name="arrow-left" size={50} color="#000000" />
-                    </TouchableOpacity>
-                    <TouchableOpacity className="bg-tertiary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate("Mostly10")}>
-                        <Icon name="arrow-right" size={50} color="#000000" />
-                    </TouchableOpacity>
-                </View>
-            </View>
-        </View>
+      <TouchableOpacity
+        style={{
+          paddingVertical: 12,
+          paddingHorizontal: 16,
+          borderRadius: 8,
+          marginHorizontal: 8,
+          backgroundColor: isSelected ? '#3E3E44' : '#FFFFFF',
+        }}
+        onPress={() => handleAnswerSelect(item.value)}
+      >
+        <Text style={{ color: isSelected ? '#FFFFFF' : '#3E3E44', fontWeight: 'bold' }}>{item.label}</Text>
+      </TouchableOpacity>
     );
+  };
+
+  const handleNext = () => {
+    // Verificar si se ha seleccionado alguna opción
+    if (answer !== null) {
+      // Enviar la opción seleccionada al contexto
+      dispatch({ type: 'ADD_ANSWER', questionId: 'mostly9', answer });
+      navigation.navigate('Mostly10');
+    } else {
+      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
+      alert('Por favor, seleccione una opción antes de continuar.');
+    }
+  };
+
+  return (
+    <View style={{ flex: 1, backgroundColor: '#5F6896', justifyContent: 'center' }}>
+      <View style={{ flex: 1, marginTop: 48, alignItems: 'center' }}>
+        <Text style={{ fontSize: 48, color: '#3E3E44', backgroundColor: '#3E3E44', marginBottom: 16, padding: 16, borderRadius: 8, fontWeight: 'bold', transform: [{ rotate: '180deg' }] }}>La gran mayoría de las personas de 60 años o más tienen una serie de discapacidades que les hace depender de los demás.</Text>
+        <FlatList
+          data={options}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.value}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={{ paddingHorizontal: 16, marginBottom: 32 }}
+        />
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 16 }}>
+          <TouchableOpacity style={{ backgroundColor: '#3E3E44', borderRadius: 8, width: 64, height: 64, justifyContent: 'center', alignItems: 'center' }} onPress={() => navigation.navigate('Mostly8')}>
+            <Icon name="arrow-left" size={30} color="#FFFFFF" />
+          </TouchableOpacity>
+          <TouchableOpacity style={{ backgroundColor: '#3E3E44', borderRadius: 8, width: 64, height: 64, justifyContent: 'center', alignItems: 'center' }} onPress={handleNext}>
+            <Icon name="arrow-right" size={30} color="#FFFFFF" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </View>
+  );
 };
 
 export default Mostly9;
