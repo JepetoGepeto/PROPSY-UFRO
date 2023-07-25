@@ -10,15 +10,10 @@ const CurrentJob = () => {
   const { dispatch } = useSurveyContext(); // Acceder al dispatch del contexto
 
   const handleNext = () => {
-    // Verificar si se ha ingresado alguna ocupación
     if (inputText.trim() !== '') {
-      // Enviar la ocupación al contexto
-      dispatch({ type: 'ADD_ANSWER', questionId: 'ocupacion', answer: inputText.trim() });
-      navigation.navigate('CivilStatus');
-    } else {
-      // Si no se ha ingresado ninguna ocupación, mostrar una alerta o mensaje al usuario para que ingrese una ocupación válida
-      alert('Por favor, ingrese una ocupación antes de continuar.');
+      dispatch({ type: 'ADD_ANSWER', questionId: 'ocupacionActual', answer: inputText.trim() });
     }
+    navigation.navigate('CivilStatus');
   };
 
   return (

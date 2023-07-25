@@ -36,15 +36,10 @@ const Daily3 = () => {
   };
 
   const handleNext = () => {
-    // Verificar si se ha seleccionado alguna opción
     if (answer !== null) {
-      // Enviar la opción seleccionada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'daily3', answer: answer });
-      navigation.navigate('Daily4');
-    } else {
-      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('Daily4');
   };
 
   return (

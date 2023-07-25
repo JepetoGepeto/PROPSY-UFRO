@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, TouchableOpacity, TextInput, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from "@react-navigation/native";
-import { useSurveyContext } from '../../../SurveyContext';
+import { useSurveyContext } from '../../SurveyContext';
 
 const MedicineOther = () => {
   const [other, setOther] = useState('');
@@ -10,11 +10,9 @@ const MedicineOther = () => {
   const { dispatch } = useSurveyContext(); // Acceder al dispatch del contexto
 
   const handleNext = () => {
-    // Enviar la respuesta al contexto solo si el campo "other" no está vacío
     if (other.trim() !== '') {
       dispatch({ type: 'ADD_ANSWER', questionId: 'otrosMedicamentos', answer: other });
     }
-
     navigation.navigate('Dementia');
   };
 

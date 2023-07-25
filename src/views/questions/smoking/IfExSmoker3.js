@@ -10,13 +10,9 @@ const IfExSmoker3 = () => {
   const { dispatch } = useSurveyContext(); // Acceder al dispatch del contexto
 
   const handleNext = () => {
-    // Verificar si se ha ingresado una respuesta
     if (answer.trim() !== '') {
-      // Si se ha ingresado una respuesta, enviarla al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'cigarrillos', answer: answer });
     }
-
-    // Navegar a la siguiente pregunta
     navigation.navigate('Drinking1');
   };
 

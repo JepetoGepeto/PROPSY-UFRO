@@ -36,15 +36,9 @@ const Frequency10 = () => {
 
   const handleNext = () => {
     if (answer !== null) {
-      // Obtener el texto de la opción seleccionada en lugar del valor numérico
-      const selectedOption = options.find((option) => option.value === answer).label;
-
-      // Enviar la opción seleccionada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'frequency10', answer: selectedOption });
-      navigation.navigate('FirstOne');
-    } else {
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('FirstOne');
   };
 
   return (

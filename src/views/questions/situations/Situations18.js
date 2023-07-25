@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, TouchableOpacity, Text, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from "@react-navigation/native";
 import { useSurveyContext } from '../../../SurveyContext';
 
 const Situations18 = () => {
+  const [answer, setAnswer] = useState(null);
   const navigation = useNavigation();
   const { dispatch } = useSurveyContext(); // Acceder al dispatch del contexto
 
@@ -15,12 +16,11 @@ const Situations18 = () => {
   ];
 
   const handleAnswerSelect = (value) => {
-    // Enviar la respuesta seleccionada al contexto
-    dispatch({ type: 'ADD_ANSWER', questionId: 'situations18', answer: value });
+    setAnswer(value);
   };
 
   const renderItem = ({ item }) => {
-    const isSelected = selectedOption === item.value;
+    const isSelected = answer === item.value;
 
     return (
       <TouchableOpacity
@@ -32,6 +32,13 @@ const Situations18 = () => {
     );
   };
 
+  const handleNext = () => {
+    if (answer !== null) {
+      dispatch({ type: 'ADD_ANSWER', questionId: 'situations18', answer: answer });
+    }
+    navigation.navigate('Situations19');
+  };
+
   return (
     <View className="flex-1 bg-[#5F6896] justify-center">
       <View className="flex-1 mt-12 items-center">
@@ -40,6 +47,7 @@ const Situations18 = () => {
           data={options}
           renderItem={renderItem}
           keyExtractor={(item) => item.value}
+          extraData={answer}
           horizontal
           showsHorizontalScrollIndicator={false}
         />
@@ -47,7 +55,7 @@ const Situations18 = () => {
           <TouchableOpacity className="bg-secondary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate('Situations17')}>
             <Icon name="arrow-left" size={50} color="#000000" />
           </TouchableOpacity>
-          <TouchableOpacity className="bg-tertiary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate('Situations19')}>
+          <TouchableOpacity className="bg-tertiary rounded-lg w-24 h-24 justify-center items-center" onPress={handleNext}>
             <Icon name="arrow-right" size={50} color="#000000" />
           </TouchableOpacity>
         </View>

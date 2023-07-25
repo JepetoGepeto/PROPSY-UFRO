@@ -19,9 +19,6 @@ const Mostly1 = () => {
 
   const handleAnswerSelect = (value) => {
     setAnswer(value);
-
-    // Enviar la respuesta seleccionada al contexto
-    dispatch({ type: 'ADD_ANSWER', questionId: 'mostly1', answer: value });
   };
 
   const renderItem = ({ item }) => (
@@ -32,6 +29,13 @@ const Mostly1 = () => {
       <Text className="text-[#3E3E44] font-bold">{item.label}</Text>
     </TouchableOpacity>
   );
+
+  const handleNext = () => {
+    if (answer !== null) {
+      dispatch({ type: 'ADD_ANSWER', questionId: 'mostly1', answer});
+    }
+    navigation.navigate('Mostly2');
+  };
 
   return (
     <View className="flex-1 bg-[#5F6896] justify-center">
@@ -49,7 +53,7 @@ const Mostly1 = () => {
           <TouchableOpacity className="bg-secondary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate("MostlyContext")}>
             <Icon name="arrow-left" size={50} color="#000000" />
           </TouchableOpacity>
-          <TouchableOpacity className="bg-tertiary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate("Mostly2")}>
+          <TouchableOpacity className="bg-tertiary rounded-lg w-24 h-24 justify-center items-center" onPress={handleNext}>
             <Icon name="arrow-right" size={50} color="#000000" />
           </TouchableOpacity>
         </View>

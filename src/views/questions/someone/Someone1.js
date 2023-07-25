@@ -18,14 +18,7 @@ const Someone1 = () => {
   ];
 
   const handleAnswerSelect = (value) => {
-    // Verificar si se ha seleccionado una nueva opción o si se ha hecho clic en la opción ya seleccionada
-    if (answer === value) {
-      // Si ya se seleccionó la opción actual, deseleccionarla
-      setAnswer(null);
-    } else {
-      // Si se selecciona una nueva opción, establecer la nueva opción seleccionada
-      setAnswer(value);
-    }
+    setAnswer(value);
   };
 
   const renderItem = ({ item }) => {
@@ -42,15 +35,10 @@ const Someone1 = () => {
   };
 
   const handleNext = () => {
-    // Verificar si se ha seleccionado alguna opción
     if (answer !== null) {
-      // Enviar la opción seleccionada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'someone1', answer });
-      navigation.navigate('Someone2');
-    } else {
-      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('Someone2');
   };
 
   return (

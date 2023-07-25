@@ -35,15 +35,10 @@ const Frequency7 = () => {
   };
 
   const handleNext = () => {
-    // Verificar si se ha seleccionado alguna opción
     if (answer !== null) {
-      // Enviar la respuesta seleccionada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'frequency7', answer });
-      navigation.navigate('Frequency8');
-    } else {
-      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('Frequency8');
   };
 
   return (

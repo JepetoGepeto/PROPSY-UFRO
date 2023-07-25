@@ -1,4 +1,3 @@
-// IfExDrinker3.js
 import React, { useState } from 'react';
 import { View, TouchableOpacity, TextInput, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -8,10 +7,9 @@ import { useSurveyContext } from '../../../SurveyContext';
 const IfExDrinker3 = () => {
   const [answer, setAnswer] = useState('');
   const navigation = useNavigation();
-  const { dispatch } = useSurveyContext(); // Acceder al dispatch del contexto
+  const { dispatch } = useSurveyContext();
 
   const handleNext = () => {
-    // Enviar el valor de la respuesta al contexto sin validaciones adicionales
     if (answer.trim() !== '') {
       dispatch({ type: 'ADD_ANSWER', questionId: 'tragos_semanales', answer: answer });
     }

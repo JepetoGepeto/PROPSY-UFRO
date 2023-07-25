@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, TouchableOpacity, TextInput, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from "@react-navigation/native";
-import { useSurveyContext } from '../../../SurveyContext';
+import { useSurveyContext } from '../../SurveyContext';
 
 const MedicalOther = () => {
   const [other, setOther] = useState('');
@@ -10,15 +10,10 @@ const MedicalOther = () => {
   const { dispatch } = useSurveyContext(); // Acceder al dispatch del contexto
 
   const handleNext = () => {
-    // Verificar si se ha ingresado alguna información en el campo de texto
     if (other.trim() !== '') {
-      // Enviar la información ingresada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'otroEnfermedades', answer: other });
-      navigation.navigate('Medicine');
-    } else {
-      // Si no se ha ingresado información, mostrar una alerta o mensaje al usuario para que complete el campo de texto
-      alert('Por favor, ingrese información en el campo antes de continuar.');
     }
+    navigation.navigate('Medicine');
   };
 
   return (

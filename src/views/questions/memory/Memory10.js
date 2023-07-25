@@ -1,4 +1,3 @@
-// Memory10.js
 import React, { useState } from 'react';
 import { View, TouchableOpacity, Text, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -23,15 +22,10 @@ const Memory10 = () => {
   };
 
   const handleNext = () => {
-    // Verificar si se ha seleccionado alguna opción
     if (answer !== null) {
-      // Enviar la respuesta seleccionada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'memory10', answer });
-      navigation.navigate('Memory11');
-    } else {
-      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('Memory11');
   };
 
   const renderItem = ({ item }) => {

@@ -35,15 +35,10 @@ const Feeling2 = () => {
   };
 
   const handleNext = () => {
-    // Verificar si se ha seleccionado alguna opción
     if (answer !== null) {
-      // Enviar la opción seleccionada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'feeling2', answer: answer });
-      navigation.navigate('Feeling3');
-    } else {
-      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('Feeling3');
   };
 
   return (

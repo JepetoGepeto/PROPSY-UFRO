@@ -37,12 +37,9 @@ const SecondOne = () => {
 
   const handleNext = () => {
     if (answer !== null) {
-      // Enviar la respuesta seleccionada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'secondOne', answer: answer });
-      navigation.navigate('ThirdOne');
-    } else {
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('ThirdOne');
   };
 
   return (

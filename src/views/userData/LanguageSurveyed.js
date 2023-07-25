@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { View, TouchableOpacity, Text, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from "@react-navigation/native";
-import { useSurveyContext } from '../../../SurveyContext';
+import { useSurveyContext } from '../../SurveyContext';
 
 const LanguageSurveyed = () => {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -33,15 +33,10 @@ const LanguageSurveyed = () => {
   };
 
   const handleNext = () => {
-    // Verificar si se ha seleccionado alguna opción
     if (selectedOption !== null) {
-      // Enviar la opción seleccionada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'idioma', answer: selectedOption });
-      navigation.navigate('LanguageExtra');
-    } else {
-      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('LanguageExtra');
   };
 
   return (

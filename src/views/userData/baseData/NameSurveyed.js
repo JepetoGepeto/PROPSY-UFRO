@@ -14,6 +14,9 @@ const NombreEncuestado = () => {
     if (trimmedName !== '') {
       dispatch({ type: 'ADD_ANSWER', questionId: 'nombre', answer: trimmedName });
       navigation.navigate('Age');
+    }else {
+      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
+      alert('Por favor, ingrese el nombre del encuestado.');
     }
   };
 

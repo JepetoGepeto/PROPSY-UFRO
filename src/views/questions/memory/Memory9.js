@@ -1,4 +1,3 @@
-// Memory9.js
 import React, { useState } from 'react';
 import { View, TouchableOpacity, Text, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -37,12 +36,9 @@ const Memory9 = () => {
 
   const handleNext = () => {
     if (answer !== null) {
-      // Enviar la respuesta seleccionada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'memory9', answer: answer });
-      navigation.navigate('Memory10');
-    } else {
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('Memory10');
   };
 
   return (

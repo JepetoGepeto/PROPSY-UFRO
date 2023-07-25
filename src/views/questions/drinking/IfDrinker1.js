@@ -11,9 +11,7 @@ const IfDrinker1 = () => {
   const { dispatch } = useSurveyContext(); // Acceder al dispatch del contexto
 
   const handleNext = () => {
-    // Verificar si se ha proporcionado una respuesta
     if (answer.trim() !== '') {
-      // Enviar la respuesta al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'tragosSemana', answer: answer });
     }
     navigation.navigate('IfDrinker2');

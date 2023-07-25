@@ -24,12 +24,9 @@ const Feeling1 = () => {
 
   const handleNext = () => {
     if (answer !== null) {
-      // Guardar la respuesta en el contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'feeling1', answer });
-      navigation.navigate('Feeling2');
-    } else {
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('Feeling2');
   };
 
   const renderItem = ({ item }) => {

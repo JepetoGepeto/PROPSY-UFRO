@@ -36,15 +36,10 @@ const Someone4 = () => {
   };
 
   const handleNext = () => {
-    // Verificar si se ha seleccionado alguna opción
     if (answer !== null) {
-      // Enviar la pregunta y respuesta seleccionada al contexto
-      dispatch({ type: 'ADD_ANSWER', questionId: 'someone4', question: 'Alguien ha estado disponible para ayudarme con mis pendientes/tareas', answer });
-      navigation.navigate('Someone5');
-    } else {
-      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
-      alert('Por favor, seleccione una opción antes de continuar.');
+      dispatch({ type: 'ADD_ANSWER', questionId: 'someone4', answer });
     }
+    navigation.navigate('Someone5');
   };
 
   return (

@@ -19,9 +19,7 @@ const FirstOne = () => {
   ];
 
   const handleAnswerSelect = (value) => {
-    // Si el valor seleccionado es igual a la respuesta actual, deseleccionarlo
-    const newAnswer = answer === value ? null : value;
-    setAnswer(newAnswer);
+    setAnswer(value);
   };
 
   const renderItem = ({ item }) => {
@@ -38,15 +36,10 @@ const FirstOne = () => {
   };
 
   const handleNext = () => {
-    // Verificar si se ha seleccionado alguna opción
     if (answer !== null) {
-      // Enviar la opción seleccionada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'firstOne', answer });
-      navigation.navigate('SecondOne');
-    } else {
-      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('SecondOne');
   };
 
   return (

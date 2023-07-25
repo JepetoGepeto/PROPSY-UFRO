@@ -11,10 +11,8 @@ const IfExSmoker1 = () => {
 
   const handleNext = () => {
     if (answer.trim() !== '') {
-      // Solo si se proporciona una respuesta válida, enviarla al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'anos_fumo', answer: trimmedAnswer });
     }
-
     navigation.navigate('IfExSmoker2');
   };
 

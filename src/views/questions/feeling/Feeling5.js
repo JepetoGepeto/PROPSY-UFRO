@@ -20,14 +20,11 @@ const Feeling5 = () => {
 
   const handleAnswerSelect = (value) => {
     setAnswer(value);
-
-    // Enviar la respuesta seleccionada al contexto
-    dispatch({ type: 'ADD_ANSWER', questionId: 'feeling5', answer: value });
   };
 
   const renderItem = ({ item }) => {
     const isSelected = item.value === answer;
-
+    
     return (
       <TouchableOpacity
         className={`py-4 px-8 rounded-lg my-auto mr-2 ${isSelected ? 'bg-primary' : 'bg-white'}`}
@@ -36,6 +33,13 @@ const Feeling5 = () => {
         <Text className={`text-[#3E3E44] font-bold ${isSelected ? 'text-white' : 'text-black'}`}>{item.label}</Text>
       </TouchableOpacity>
     );
+  };
+
+  const handleNext = () => {
+    if (answer !== null) {
+      dispatch({ type: 'ADD_ANSWER', questionId: 'feeling5', answer });
+    }
+    navigation.navigate('Feeling6');
   };
 
   return (
@@ -54,7 +58,7 @@ const Feeling5 = () => {
           <TouchableOpacity className="bg-secondary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate('Feeling4')}>
             <Icon name="arrow-left" size={50} color="#000000" />
           </TouchableOpacity>
-          <TouchableOpacity className="bg-tertiary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate('Feeling6')}>
+          <TouchableOpacity className="bg-tertiary rounded-lg w-24 h-24 justify-center items-center" onPress={handleNext}>
             <Icon name="arrow-right" size={50} color="#000000" />
           </TouchableOpacity>
         </View>

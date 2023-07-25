@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { View, TouchableOpacity, TextInput, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native';
-import { useSurveyContext } from '../../../SurveyContext';
+import { useSurveyContext } from '../../SurveyContext';
 
 const DrivingExtra = () => {
   const [driving, setDriving] = useState('');
@@ -11,15 +11,10 @@ const DrivingExtra = () => {
   const { dispatch } = useSurveyContext(); // Acceder al dispatch del contexto
 
   const handleNext = () => {
-    // Verificar si se ha ingresado una respuesta
     if (driving !== '') {
-      // Enviar la respuesta al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'renovacion', answer: driving });
-      navigation.navigate('Language');
-    } else {
-      // Si no se ha ingresado una respuesta, mostrar una alerta o mensaje al usuario para que complete el campo
-      alert('Por favor, indique los años en que se renovó la licencia de conducir antes de continuar.');
     }
+    navigation.navigate('Language');
   };
 
   return (

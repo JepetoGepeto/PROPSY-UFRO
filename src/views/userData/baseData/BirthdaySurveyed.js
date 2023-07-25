@@ -13,9 +13,10 @@ const BirthdaySurveyed = () => {
   const {dispatch } = useSurveyContext();
 
   const handleNext = () => {
-    // Combina los valores de día, mes y año en un solo dato tipo String en formato "Dia/Mes/Año"
     const birthday = `${day}/${month}/${year}`;
-    dispatch({ type: 'ADD_ANSWER', questionId: 'cumpleanos', answer: birthday });
+    if (birthday !== '') {
+      dispatch({ type: 'ADD_ANSWER', questionId: 'cumpleanos', answer: birthday });
+    }
     navigation.navigate('Sex');
   };
 

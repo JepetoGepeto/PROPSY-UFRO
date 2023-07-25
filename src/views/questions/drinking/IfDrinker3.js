@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 import { View, TouchableOpacity, TextInput, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from "@react-navigation/native";
+import { useSurveyContext } from '../../../SurveyContext';
 
 const IfDrinker3 = () => {
   const [answer, setAnswer] = useState('');
   const navigation = useNavigation();
+  const { dispatch } = useSurveyContext();
 
   const handleNext = () => {
-    // Si el usuario no ha ingresado una respuesta, simplemente navega a la siguiente pantalla
     if (answer.trim() !== '') {
       dispatch({ type: 'ADD_ANSWER', questionId: 'edadInicioBeber', answer: answer });
     }

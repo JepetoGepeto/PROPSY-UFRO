@@ -20,12 +20,7 @@ const Friends1 = () => {
   ];
 
   const handleAnswerSelect = (value) => {
-    // Solo permitir seleccionar una opción
-    if (answer === value) {
-      setAnswer(null); // Desmarcar la opción si ya está seleccionada
-    } else {
-      setAnswer(value); // Marcar la opción seleccionada
-    }
+    setAnswer(value);
   };
 
   const renderItem = ({ item }) => {
@@ -42,15 +37,10 @@ const Friends1 = () => {
   };
 
   const handleNext = () => {
-    // Verificar si se ha seleccionado alguna opción
     if (answer !== null) {
-      // Enviar la opción seleccionada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'friends1', answer: answer });
-      navigation.navigate('Friends2');
-    } else {
-      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('Friends2');
   };
 
   return (

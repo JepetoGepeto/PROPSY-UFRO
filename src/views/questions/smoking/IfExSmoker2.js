@@ -10,9 +10,7 @@ const IfExSmoker2 = () => {
   const { dispatch } = useSurveyContext(); // Acceder al dispatch del contexto
 
   const handleNext = () => {
-    // Verificar si se ingresó una respuesta
     if (answer.trim() !== '') {
-      // Enviar la respuesta al contexto solo si se ingresó una respuesta válida
       dispatch({ type: 'ADD_ANSWER', questionId: 'aniosDejoDeFumar', answer: answer.trim() });
     }
     navigation.navigate('IfExSmoker3');

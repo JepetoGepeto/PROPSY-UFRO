@@ -11,10 +11,8 @@ const IfSmoker2 = () => {
 
   const handleNext = () => {
     if (answer.trim() !== '') {
-      // Solo si se proporciona una respuesta válida, enviarla al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'edadFumador', answer: answer });
     }
-
     navigation.navigate("IfExSmokerContext");
   };
 

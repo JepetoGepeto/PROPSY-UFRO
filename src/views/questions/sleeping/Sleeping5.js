@@ -36,15 +36,10 @@ const Sleeping5 = () => {
   };
 
   const handleNext = () => {
-    // Verificar si se ha seleccionado alguna opción
     if (answer !== null) {
-      // Enviar la opción seleccionada al contexto
-      dispatch({ type: 'ADD_ANSWER', questionId: 'calidad_sueno', answer: answer });
-      navigation.navigate('SmokingContext');
-    } else {
-      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
-      alert('Por favor, seleccione una opción antes de continuar.');
+      dispatch({ type: 'ADD_ANSWER', questionId: 'sleeping5', answer: answer });
     }
+    navigation.navigate('SmokingContext');
   };
 
   return (

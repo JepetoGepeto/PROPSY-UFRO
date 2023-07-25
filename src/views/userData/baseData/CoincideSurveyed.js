@@ -21,7 +21,6 @@ const CoincideSurveyed = () => {
   };
 
   const renderItem = ({ item }) => {
-    // Verificar si la opción está seleccionada
     const isSelected = coincide === item.value;
 
     return (
@@ -35,8 +34,9 @@ const CoincideSurveyed = () => {
   };
 
   const handleNext = () => {
-    // Enviar la opción seleccionada al contexto
-    dispatch({ type: 'ADD_ANSWER', questionId: 'coincide', answer: coincide });
+    if (coincide !== null) {
+      dispatch({ type: 'ADD_ANSWER', questionId: 'coincide', answer: coincide });
+    }
     navigation.navigate('EducationalLevel');
   };
 

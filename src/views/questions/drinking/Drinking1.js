@@ -16,12 +16,7 @@ const Drinking1 = () => {
   ];
 
   const handleAnswerSelect = (value) => {
-    // Si el valor seleccionado es el mismo que el actual, lo deseleccionamos
-    if (value === answer) {
-      setAnswer(null);
-    } else {
-      setAnswer(value);
-    }
+    setAnswer(value);
   };
 
   const renderItem = ({ item }) => {
@@ -38,15 +33,10 @@ const Drinking1 = () => {
   };
 
   const handleNext = () => {
-    // Verificar si se ha seleccionado alguna opción
     if (answer !== null) {
-      // Enviar la opción seleccionada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'consumoAlcohol', answer });
-      navigation.navigate('IfDrinkerContext');
-    } else {
-      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('IfDrinkerContext');
   };
 
   return (

@@ -1,4 +1,3 @@
-// Memory5.js
 import React, { useState } from 'react';
 import { View, TouchableOpacity, Text, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -20,19 +19,27 @@ const Memory5 = () => {
 
   const handleAnswerSelect = (value) => {
     setAnswer(value);
-
-    // Enviar la respuesta seleccionada al contexto
-    dispatch({ type: 'ADD_ANSWER', questionId: 'memory5', answer: value });
   };
 
-  const renderItem = ({ item }) => (
-    <TouchableOpacity
-      className={`py-4 px-8 rounded-lg my-auto mr-2 ${item.value === answer ? 'bg-primary' : 'bg-white'}`}
-      onPress={() => handleAnswerSelect(item.value)}
-    >
-      <Text className="text-[#3E3E44] font-bold">{item.label}</Text>
-    </TouchableOpacity>
-  );
+  const renderItem = ({ item }) => {
+    const isSelected = answer === item.value;
+
+    return (
+      <TouchableOpacity
+        className={`py-4 px-8 rounded-lg my-auto mr-2 ${isSelected ? 'bg-primary' : 'bg-white'}`}
+        onPress={() => handleAnswerSelect(item.value)}
+      >
+        <Text className={`text-[#3E3E44] font-bold ${isSelected ? 'text-white' : 'text-black'}`}>{item.label}</Text>
+      </TouchableOpacity>
+    );
+  };
+
+  const handleNext = () => {
+    if (answer !== null) {
+      dispatch({ type: 'ADD_ANSWER', questionId: 'memory4', answer });
+    }
+    navigation.navigate('Memory6');
+  };
 
   return (
     <View className="flex-1 bg-[#5F6896] justify-center">
@@ -50,7 +57,7 @@ const Memory5 = () => {
           <TouchableOpacity className="bg-secondary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate("Memory4")}>
             <Icon name="arrow-left" size={50} color="#000000" />
           </TouchableOpacity>
-          <TouchableOpacity className="bg-tertiary rounded-lg w-24 h-24 justify-center items-center" onPress={() => navigation.navigate("Memory6")}>
+          <TouchableOpacity className="bg-tertiary rounded-lg w-24 h-24 justify-center items-center" onPress={handleNext}>
             <Icon name="arrow-right" size={50} color="#000000" />
           </TouchableOpacity>
         </View>

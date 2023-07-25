@@ -15,8 +15,8 @@ const AgeSurveyed = () => {
     const trimmedAge = age.trim();
     if (trimmedAge !== '') {
       dispatch({ type: 'ADD_ANSWER', questionId: 'edad', answer: trimmedAge });
-      navigation.navigate('Birthday');
     }
+    navigation.navigate('Birthday');
   };
 
   return (

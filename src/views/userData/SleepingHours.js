@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, TouchableOpacity, TextInput, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from "@react-navigation/native";
-import { useSurveyContext } from '../../../SurveyContext';
+import { useSurveyContext } from '../../SurveyContext';
 
 const SleepingHours = () => {
   const [sleeping, setSleeping] = useState('');
@@ -10,15 +10,10 @@ const SleepingHours = () => {
   const { dispatch } = useSurveyContext(); // Acceder al dispatch del contexto
 
   const handleNext = () => {
-    // Verificar si se ha ingresado un valor válido
     if (sleeping.trim() !== '') {
-      // Enviar las horas de sueño al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'horas_sueno', answer: sleeping });
-      navigation.navigate('SleepingContext');
-    } else {
-      // Si no se ha ingresado un valor válido, mostrar una alerta o mensaje al usuario para que ingrese las horas de sueño
-      alert('Por favor, ingrese las horas de sueño antes de continuar.');
-    }
+    } 
+    navigation.navigate('SleepingContext');
   };
 
   return (

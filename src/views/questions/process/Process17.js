@@ -23,15 +23,10 @@ const Process17 = () => {
   };
 
   const handleNext = () => {
-    // Verificar si se ha seleccionado alguna opción
     if (answer !== null) {
-      // Enviar la respuesta seleccionada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'process17', answer });
-      navigation.navigate('Process18');
-    } else {
-      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('Process18');
   };
 
   const renderItem = ({ item }) => {

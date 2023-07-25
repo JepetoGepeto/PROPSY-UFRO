@@ -10,9 +10,7 @@ const IfSmoker1 = () => {
   const { dispatch } = useSurveyContext(); // Acceder al dispatch del contexto
 
   const handleNext = () => {
-    // Verificar si se ha ingresado una respuesta
     if (answer.trim() !== '') {
-      // Enviar la respuesta al contexto solo si no está vacía
       dispatch({ type: 'ADD_ANSWER', questionId: 'cigarrillosSemana', answer: answer });
     }
     navigation.navigate('IfSmoker2');

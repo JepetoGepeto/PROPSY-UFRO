@@ -11,7 +11,6 @@ const EducationIncomplete = () => {
   const { dispatch } = useSurveyContext(); // Acceder al dispatch del contexto
 
   const handleNext = () => {
-    // Enviar la respuesta ingresada al contexto solo si no está vacía
     if (inputText.trim() !== '') {
       dispatch({ type: 'ADD_ANSWER', questionId: 'nivelCursado', answer: inputText });
     }

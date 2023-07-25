@@ -2,23 +2,18 @@ import React, { useState } from 'react';
 import { View, TouchableOpacity, TextInput, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from "@react-navigation/native";
-import { useSurveyContext } from '../../../SurveyContext';
+import { useSurveyContext } from '../../SurveyContext';
 
 const LanguageExtra = () => {
   const [language, setLanguage] = useState('');
   const navigation = useNavigation();
-  const { dispatch } = useSurveyContext(); // Acceder al dispatch del contexto
+  const { dispatch } = useSurveyContext();
 
   const handleNext = () => {
-    // Verificar si se ha ingresado el idioma
     if (language.trim() !== '') {
-      // Enviar el idioma ingresado al contexto
-      dispatch({ type: 'ADD_ANSWER', questionId: 'idioma', answer: language });
-      navigation.navigate('SocioEconomicLevel');
-    } else {
-      // Si no se ha ingresado el idioma, mostrar una alerta o mensaje al usuario para que lo ingrese
-      alert('Por favor, ingrese el o los idiomas antes de continuar.');
+      dispatch({ type: 'ADD_ANSWER', questionId: 'idiomaExtra', answer: language });
     }
+    navigation.navigate('SocioEconomicLevel');
   };
 
   return (

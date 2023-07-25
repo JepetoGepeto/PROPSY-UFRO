@@ -35,15 +35,10 @@ const Sleeping3 = () => {
   };
 
   const handleNext = () => {
-    // Verificar si se ha seleccionado alguna opción
     if (answer !== null) {
-      // Enviar la respuesta seleccionada al contexto
-      dispatch({ type: 'ADD_ANSWER', questionId: 'interrupciones_dormir', answer });
-      navigation.navigate('Sleeping4');
-    } else {
-      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
-      alert('Por favor, seleccione una opción antes de continuar.');
+      dispatch({ type: 'ADD_ANSWER', questionId: 'sleeping3', answer });
     }
+    navigation.navigate('Sleeping4');
   };
 
   return (

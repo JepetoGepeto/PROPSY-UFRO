@@ -37,12 +37,9 @@ const Process21 = () => {
 
   const handleNext = () => {
     if (answer !== null) {
-      // Enviar la opción seleccionada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'process21', answer });
-      navigation.navigate('Process22');
-    } else {
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('Process22');
   };
 
   return (

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { View, TouchableOpacity, Text, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native';
-import { useSurveyContext } from '../../../SurveyContext';
+import { useSurveyContext } from '../../SurveyContext';
 
 const CivilStatusSurveyed = () => {
   const [selectedStatus, setSelectedStatus] = useState(null);
@@ -37,15 +37,10 @@ const CivilStatusSurveyed = () => {
   };
 
   const handleNext = () => {
-    // Verificar si se ha seleccionado alguna opción
     if (selectedStatus !== null) {
-      // Enviar la opción seleccionada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'estadoCivil', answer: selectedStatus });
-      navigation.navigate('HealthSurveyed');
-    } else {
-      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('HealthSurveyed');
   };
 
   return (

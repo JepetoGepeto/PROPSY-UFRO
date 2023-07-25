@@ -35,15 +35,10 @@ const Process15 = () => {
   };
 
   const handleNext = () => {
-    // Verificar si se ha seleccionado alguna opción
     if (answer !== null) {
-      // Enviar la respuesta al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'process15', answer });
-      navigation.navigate('Process16');
-    } else {
-      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('Process16');
   };
 
   return (

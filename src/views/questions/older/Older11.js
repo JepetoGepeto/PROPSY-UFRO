@@ -18,14 +18,7 @@ const Older11 = () => {
   ];
 
   const handleAnswerSelect = (value) => {
-    // Verificar si la opción ya está seleccionada
-    if (answer === value) {
-      // Si la opción ya está seleccionada, deseleccionarla
-      setAnswer(null);
-    } else {
-      // Si la opción no está seleccionada, seleccionarla
-      setAnswer(value);
-    }
+    setAnswer(value);
   };
 
   const renderItem = ({ item }) => {
@@ -42,15 +35,10 @@ const Older11 = () => {
   };
 
   const handleNext = () => {
-    // Verificar si se ha seleccionado alguna opción
     if (answer !== null) {
-      // Enviar la opción seleccionada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'older11', answer });
-      navigation.navigate('Older12');
-    } else {
-      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('Older12');
   };
 
   return (

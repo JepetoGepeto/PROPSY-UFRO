@@ -18,13 +18,7 @@ const Process11 = () => {
   ];
 
   const handleAnswerSelect = (value) => {
-    // Si la opción seleccionada es diferente a la respuesta actual, actualiza la respuesta
-    if (value !== answer) {
-      setAnswer(value);
-    } else {
-      // Si la opción seleccionada es igual a la respuesta actual, deselecciona la respuesta actual
-      setAnswer(null);
-    }
+    setAnswer(value);
   };
 
   const renderItem = ({ item }) => {
@@ -41,15 +35,10 @@ const Process11 = () => {
   };
 
   const handleNext = () => {
-    // Verificar si se ha seleccionado alguna opción
     if (answer !== null) {
-      // Enviar la opción seleccionada al contexto
       dispatch({ type: 'ADD_ANSWER', questionId: 'process11', answer });
-      navigation.navigate('Process12');
-    } else {
-      // Si no se ha seleccionado ninguna opción, mostrar una alerta o mensaje al usuario para que seleccione una opción
-      alert('Por favor, seleccione una opción antes de continuar.');
     }
+    navigation.navigate('Process12');
   };
 
   return (
