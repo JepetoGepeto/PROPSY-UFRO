@@ -10,11 +10,11 @@ const Frequency10 = () => {
   const { dispatch } = useSurveyContext(); // Acceder al dispatch del contexto
 
   const options = [
-    { label: 'Muy en desacuerdo', value: '1' },
-    { label: 'En desacuerdo', value: '2' },
-    { label: 'Ni de acuerdo ni en desacuerdo', value: '3' },
-    { label: 'De acuerdo', value: '4' },
-    { label: 'Muy de acuerdo', value: '5' },
+    { label: 'Nunca', value: '1' },
+    { label: 'Rara vez', value: '2' },
+    { label: 'A veces', value: '3' },
+    { label: 'A menudo', value: '4' },
+    { label: 'Muy a menudo', value: '5' },
   ];
 
   const handleAnswerSelect = (value) => {
@@ -36,7 +36,7 @@ const Frequency10 = () => {
 
   const handleNext = () => {
     if (answer !== null) {
-      dispatch({ type: 'ADD_ANSWER', questionId: 'frequency10', answer: selectedOption });
+      dispatch({ type: 'ADD_ANSWER', questionId: 'frequency10', answer: answer });
     }
     navigation.navigate('FirstOne');
   };

@@ -11,7 +11,7 @@ const IfExSmoker1 = () => {
 
   const handleNext = () => {
     if (answer.trim() !== '') {
-      dispatch({ type: 'ADD_ANSWER', questionId: 'anos_fumo', answer: trimmedAnswer });
+      dispatch({ type: 'ADD_ANSWER', questionId: 'anos_fumo', answer: answer });
     }
     navigation.navigate('IfExSmoker2');
   };

@@ -22,7 +22,7 @@ const Situations6 = () => {
 
   const handleNext = () => {
     if (answer !== null) {
-      dispatch({ type: 'ADD_ANSWER', questionId: 'situacions6', answer: answer });
+      dispatch({ type: 'ADD_ANSWER', questionId: 'situations6', answer: answer });
     }
     navigation.navigate('Situations7');
   };

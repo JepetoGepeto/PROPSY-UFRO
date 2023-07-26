@@ -36,7 +36,7 @@ const Memory5 = () => {
 
   const handleNext = () => {
     if (answer !== null) {
-      dispatch({ type: 'ADD_ANSWER', questionId: 'memory4', answer });
+      dispatch({ type: 'ADD_ANSWER', questionId: 'memory5', answer });
     }
     navigation.navigate('Memory6');
   };
