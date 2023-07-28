@@ -13,26 +13,29 @@ const LandingFinal = () => {
 
   const saveDataToExcel = async () => {
     try {
-      const filePath = `${FileSystem.documentDirectory}/propsy.xlsx`;
+      const filePath = `${FileSystem.documentDirectory}/Propsy.xlsx`;
 
       // Leer el archivo existente (si existe)
-      // Leer el archivo existente (si existe)
-      let existingData = [];
-      if (await RNFetchBlob.fs.exists(filePath)) {
-        const data = await RNFetchBlob.fs.readFile(filePath, 'base64');
+      let existingData = null;
+      if (await FileSystem.getInfoAsync(filePath)) {
+        const data = await FileSystem.readAsStringAsync(filePath, {
+          encoding: FileSystem.EncodingType.Base64,
+        });
         existingData = XLSX.read(data, { type: 'base64' });
       }
 
       // Obtener los datos existentes como una matriz
-      const existingDataArray = XLSX.utils.sheet_to_json(existingData.Sheets['Encuestas'], { header: 1 });
+      const existingDataArray = existingData
+        ? XLSX.utils.sheet_to_json(existingData.Sheets['Encuestas'], { header: 1 }).filter(row => row && row.length > 0)
+        : [];
 
+        
       // Encontrar la última fila no vacía (la última fila que contiene datos)
       const lastRowIndex = existingDataArray.length;
-      const nextRowIndex = lastRowIndex + 1;
+      const nextRowIndex = lastRowIndex;
 
-      // Agregar los datos de la encuesta a la hoja de cálculo, comenzando desde la siguiente fila vacía
-      const worksheet = XLSX.utils.sheet_to_json(existingData.Sheets['Encuestas']);
-      worksheet[nextRowIndex] = [
+      // Crear un arreglo con los datos de la encuesta en el orden deseado
+      const dataRow = [
         surveyData.nombre,
         surveyData.edad,
         surveyData.cumpleanos,
@@ -223,10 +226,13 @@ const LandingFinal = () => {
         surveyData.daily17,
       ];
 
+      // Agregar los datos de la encuesta a la hoja de cálculo, comenzando desde la siguiente fila vacía
+      const worksheet = XLSX.utils.aoa_to_sheet(existingDataArray);
+      XLSX.utils.sheet_add_aoa(worksheet, [dataRow], { origin: nextRowIndex });
+
       // Crear el archivo Excel con los nuevos datos
-      const workSheet = XLSX.utils.json_to_sheet(worksheet);
       const workBook = XLSX.utils.book_new();
-      XLSX.utils.book_append_sheet(workBook, workSheet, 'Encuestas');
+      XLSX.utils.book_append_sheet(workBook, worksheet, 'Encuestas');
 
       // Guardar el archivo en el sistema de archivos local
       const excelFileContent = XLSX.write(workBook, { type: 'base64' });

@@ -10,7 +10,7 @@ export default function App() {
   const navigation = useNavigation();
 
   const generateExcelIfNotExists = async () => {
-    const filePath = FileSystem.documentDirectory + 'propsy.xlsx';
+    const filePath = FileSystem.documentDirectory + 'Propsy.xlsx';
 
     // Verificar si el archivo ya existe
     const fileExists = await FileSystem.getInfoAsync(filePath);
@@ -37,7 +37,7 @@ export default function App() {
   }, []);
 
   const shareExcelFile = async () => {
-    const filePath = FileSystem.documentDirectory + 'propsy.xlsx';
+    const filePath = FileSystem.documentDirectory + 'Propsy.xlsx';
     
     // Comprobar si el archivo existe antes de compartirlo
     const fileExists = await FileSystem.getInfoAsync(filePath);
