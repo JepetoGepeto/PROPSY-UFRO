@@ -25,7 +25,6 @@
     "expo-permissions": "~14.2.1",
     "expo-screen-orientation": "~6.0.5",
     "expo-sharing": "~11.5.0",
-    "expo-updates": "~0.18.11",
     "nativewind": "^2.0.11",
     "react": "18.2.0",
     "react-native": "0.72.3",

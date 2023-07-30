@@ -56,7 +56,7 @@ export default function App() {
 
   return (
     <View className="flex-1 bg-[#5F6896]">
-      <View className="bg-[#FFFFFF] flex-row justify-center items-center p-20 rounded-b-[35] ">
+      <View className="bg-[#FFFFFF] flex-row justify-center items-center p-20 rounded-b-lg ">
         <Image source={require('../../assets/images/LabCES.jpg')} className="w-[296] h-[102] rotate-180" />
         <Text className="text-[#3E3E44] text-6xl mx-5 rotate-180">PROPSY</Text>
         <Image source={require('../../assets/images/UFRO.png')} className="w-[296] h-[102] rotate-180" />
